@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="defaultPersistenceUnit" transaction-type="RESOURCE_LOCAL">
+
+	<class>singleTable.main.model.dao.Employee</class>
+
+    <class>relation.inheritanceSingleTable.Staff</class>
+    <class>relation.inheritanceSingleTable.TeachingStaff</class>
+    <class>relation.inheritanceSingleTable.NonTeachingStaff</class>
+    
+    <class>relation.inheritanceJoinedTable.StaffJoined</class>
+    <class>relation.inheritanceJoinedTable.TeachingStaffJoined</class>
+    <class>relation.inheritanceJoinedTable.NonTeachingStaffJoined</class>
+    
+    <class>relation.inheritanceTablePerClass.StaffTablePerClass</class>
+    <class>relation.inheritanceTablePerClass.TeachingStaffTablePerClass</class>
+    <class>relation.inheritanceTablePerClass.NonTeachingStaffTablePerClass</class>
+<!--  manyToOneRelation package this for (ManyToOne)  -->
+    <class>relation.manyToOneRelation.Employe</class>
+    <class>relation.manyToOneRelation.Department</class>
+<!-- OneToManyRelation this for  (OneToMany) -->  
+    <class>relation.OneToManyRelation.DepartmentO</class>  
+    <class>relation.OneToManyRelation.EmployeeO</class>
+<!-- oneToOneRelation this for (OneToOne) -->
+    <class>relation.oneToOneRelation.Employeee</class>
+    <class>relation.oneToOneRelation.Depart</class>    
+      <properties>
+         <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/testingMyJPA"/>
+         <property name="javax.persistence.jdbc.user" value="root"/>
+         <property name="javax.persistence.jdbc.password" value="root"/>
+         <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+         <property name="eclipselink.logging.level" value="FINE"/>
+         <property name="eclipselink.ddl-generation" value="create-tables"/>
+      </properties>
+	
+	</persistence-unit>
+</persistence>
